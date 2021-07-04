@@ -1,5 +1,5 @@
 import MyNavbar from "./components/Navbar/Navbar";
-import Form from "./components/Form/Form";
+import Container from "./components/Container/Container";
 
 import "./App.css";
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="container-fluid">
       <MyNavbar />
-      <Form />
+      <Container />
     </div>
   );
 }

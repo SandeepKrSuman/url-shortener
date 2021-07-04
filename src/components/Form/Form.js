@@ -4,13 +4,15 @@ import Button from '@material-ui/core/Button';
 
 import './Form.css';
 
-function Form() {
+function Form(props) {
     return (
-        <form className="formstyle" noValidate autoComplete="off">
+        <form className="formstyle" noValidate autoComplete="off" onSubmit={props.handleSubmit}>
             <TextField
                 className="textfield-style"
                 required
                 type="url"
+                onChange={props.handleChange}
+                value={props.inputTxt}
                 id="outlined-basic"
                 label="Enter a URL"
                 variant="outlined"
