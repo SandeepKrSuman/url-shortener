@@ -1,9 +1,10 @@
-import './App.css';
+import MyNavbar from "./Navbar/Navbar";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-
+    <div className="container-fluid">
+      <MyNavbar />
     </div>
   );
 }
