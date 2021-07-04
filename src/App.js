@@ -1,5 +1,5 @@
-import MyNavbar from "./Navbar/Navbar";
-import Form from "./Form/Form";
+import MyNavbar from "./components/Navbar/Navbar";
+import Form from "./components/Form/Form";
 
 import "./App.css";
 
