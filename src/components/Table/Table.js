@@ -11,7 +11,7 @@ import Link from '@material-ui/core/Link';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: theme.palette.warning.main,
     color: theme.palette.common.white,
   },
   body: {
@@ -28,8 +28,14 @@ const StyledTableRow = withStyles((theme) => ({
 }))(TableRow);
 
 const useStyles = makeStyles({
+  styletable: {
+    marginTop: '15%'
+  },
   table: {
-    minWidth: 400,
+    minWidth: 300,
+  },
+  linkcolor: {
+    color: '#0277bd'
   },
 });
 
@@ -37,7 +43,7 @@ export default function CustomizedTables() {
   const classes = useStyles();
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} className={classes.styletable}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -47,8 +53,8 @@ export default function CustomizedTables() {
         </TableHead>
         <TableBody>
           <StyledTableRow>
-            <StyledTableCell component="th" scope="row"><Link target="_blank" href='https://material-ui.com/'>full url</Link></StyledTableCell>
-            <StyledTableCell align="right"><Link href='https://material-ui.com/'>Shortened url</Link></StyledTableCell>
+            <StyledTableCell component="th" scope="row"><Link target="_blank" href='https://material-ui.com/' className={classes.linkcolor}>full url</Link></StyledTableCell>
+            <StyledTableCell align="right"><Link href='https://material-ui.com/' className={classes.linkcolor}>Shortened url</Link></StyledTableCell>
           </StyledTableRow>
         </TableBody>
       </Table>

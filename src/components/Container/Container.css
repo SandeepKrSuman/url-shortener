@@ -2,3 +2,9 @@
   margin-top: 15%;
   text-align: center;
 }
+@media (max-width: 767.5px) {
+  .contain {
+    margin-top: 40%;
+    text-align: center;
+  }
+}

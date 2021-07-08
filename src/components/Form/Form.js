@@ -19,7 +19,7 @@ function Form(props) {
                 InputProps={{
                     endAdornment: (
                         <InputAdornment position="end">
-                            <Button variant="contained" color="primary">Shorten</Button>
+                            <Button variant="contained" style={{backgroundColor: '#039be5', color: '#ffffff'}}>Shorten</Button>
                         </InputAdornment>
                     ),
                 }}
