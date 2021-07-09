@@ -53,7 +53,7 @@ export default function CustomizedTables(props) {
         </TableHead>
         <TableBody>
           <StyledTableRow>
-            <StyledTableCell component="th" scope="row"><Link target="_blank" href={`${props.full}`} className={classes.linkcolor}>{props.full}</Link></StyledTableCell>
+            <StyledTableCell component="th" scope="row"><Link target="_blank" href={`${props.full}`} rel="noreferrer noopener" className={classes.linkcolor}>{props.full}</Link></StyledTableCell>
             <StyledTableCell align="right"><Link href={`http://localhost:5000/${props.short}`} className={classes.linkcolor}>{props.short}</Link></StyledTableCell>
           </StyledTableRow>
         </TableBody>
