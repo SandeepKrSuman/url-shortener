@@ -1,31 +1,37 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import shortUrl from './model/shortStore.js';
+import cors from 'cors';
 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/shorturlDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb://localhost:27017/shortUrlDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
-let query;
+//use cors to allow cross origin resource sharing
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+  })
+);
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('Hello There!');
 });
 
 app.post('/short', async (req, res) => {
-  await shortUrl.create({ full: req.body.fullUrl });
-  query = await req.body.fullUrl;
-});
-
-app.get('/find', async (req, res) => {
-  const found = await shortUrl.find({full: `${query}`});
+  await shortUrl.create({full: req.body.full});
+  const found = await shortUrl.find({full: req.body.full});
   res.send(found);
 });
 
 app.get('/:shortUrl', async (req, res) => {
   const short = await shortUrl.findOne({ short: req.params.shortUrl });
   if (short == null) return res.sendStatus(404);
-  res.redirect(shortUrl.full)
+  res.redirect(`${short.full}`);
 });
 
 let port = process.env.PORT;
