@@ -55,9 +55,11 @@
 - Step 9: While backend server is still running, open a new tab on the terminal and `cd` to the main project directory i.e. `url-shortener`.
 - Step 10: Finally start the react app using `npm start`. The app will start on port `3000` which can be accessed through <http://localhost:3000/>.
 
+---
+
 <br> <br>
 
-<p align='center'>If you like this project do show some love by giving this repo a 🌟</p>
+<p align='center'>If you like this project do show some love by giving this repo a 🌟.</p>
   
 <br>
 
