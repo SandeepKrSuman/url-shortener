@@ -39,7 +39,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function CustomizedTables() {
+export default function CustomizedTables(props) {
   const classes = useStyles();
 
   return (
@@ -53,8 +53,8 @@ export default function CustomizedTables() {
         </TableHead>
         <TableBody>
           <StyledTableRow>
-            <StyledTableCell component="th" scope="row"><Link target="_blank" href='https://material-ui.com/' className={classes.linkcolor}>full url</Link></StyledTableCell>
-            <StyledTableCell align="right"><Link href='https://material-ui.com/' className={classes.linkcolor}>Shortened url</Link></StyledTableCell>
+            <StyledTableCell component="th" scope="row"><Link target="_blank" href={`${props.full}`} className={classes.linkcolor}>{props.full}</Link></StyledTableCell>
+            <StyledTableCell align="right"><Link href={`http://localhost:5000/${props.short}`} className={classes.linkcolor}>{props.short}</Link></StyledTableCell>
           </StyledTableRow>
         </TableBody>
       </Table>
