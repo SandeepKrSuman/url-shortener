@@ -2,6 +2,8 @@
 
   <p align="center">URL/Link shortener built on MERN stack.</p>  
     
+  <br>
+    
 ![url-shortener](/public/shortener_sneek.png)
   
 ---
