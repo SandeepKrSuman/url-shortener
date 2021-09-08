@@ -71,6 +71,12 @@
   
 <br>
 
+### License
+
+[MIT](LICENSE) © [SandeepKrSuman](https://github.com/SandeepKrSuman)
+
+<br>
+
 ### Developer 😎
 
 Made with ❤ by [SandeepKrSuman](https://github.com/SandeepKrSuman).
