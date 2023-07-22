@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Form.module.css";
 import axios from "axios";
 
-const serverBase = process.env.SERVERURL || "http://localhost:5000";
+const serverBase = process.env.REACT_APP_SERVERURL || "http://localhost:5000";
 
 function is_url(str) {
   let exp = new RegExp(
