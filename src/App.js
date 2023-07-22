@@ -1,12 +1,12 @@
-import MyNavbar from "./components/Navbar/Navbar";
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
 import Container from "./components/Container/Container";
-
-import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
   return (
-    <div className="container-fluid">
-      <MyNavbar />
+    <div className={styles.container}>
+      <Navbar />
       <Container />
     </div>
   );

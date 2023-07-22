@@ -1,9 +1,0 @@
-.formstyle {
-  margin: 8% 0;
-  text-align: center;
-}
-@media (min-width: 767.6px) {
-  .textfield-style {
-    width: 50%;
-  }
-}
